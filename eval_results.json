@@ -1,0 +1,478 @@
+{
+  "mode": "offline",
+  "simple_accuracy": [
+    18,
+    20
+  ],
+  "chained_accuracy": [
+    5,
+    10
+  ],
+  "rows": [
+    {
+      "group": "simple",
+      "prompt": "Put my laptop into maximum battery saving mode.",
+      "expected": [
+        "enable_battery_saver"
+      ],
+      "got": [
+        "enable_battery_saver"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Turn on power saver",
+      "expected": [
+        "enable_battery_saver"
+      ],
+      "got": [
+        "enable_battery_saver"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "I need my battery to last longer",
+      "expected": [
+        "enable_battery_saver"
+      ],
+      "got": [],
+      "hit": false,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Switch the CPU governor to powersave",
+      "expected": [
+        "set_cpu_governor"
+      ],
+      "got": [
+        "set_cpu_governor"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Use performance mode on the processor",
+      "expected": [
+        "set_cpu_governor"
+      ],
+      "got": [
+        "set_cpu_governor"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Change governor to schedutil",
+      "expected": [
+        "set_cpu_governor"
+      ],
+      "got": [
+        "set_cpu_governor"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Set brightness to 40%",
+      "expected": [
+        "set_screen_brightness"
+      ],
+      "got": [
+        "set_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Make the screen brightness 75 percent",
+      "expected": [
+        "set_screen_brightness"
+      ],
+      "got": [
+        "set_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Dim the screen a bit",
+      "expected": [
+        "change_screen_brightness"
+      ],
+      "got": [
+        "change_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Brighten the display",
+      "expected": [
+        "change_screen_brightness"
+      ],
+      "got": [
+        "change_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Lower the brightness by 15%",
+      "expected": [
+        "change_screen_brightness"
+      ],
+      "got": [
+        "change_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Increase brightness by 30 percent",
+      "expected": [
+        "change_screen_brightness"
+      ],
+      "got": [
+        "change_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Set the screen to maximum brightness",
+      "expected": [
+        "set_screen_brightness"
+      ],
+      "got": [
+        "set_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "What governor is my CPU using?",
+      "expected": [
+        "get_power_status"
+      ],
+      "got": [
+        "list_available_governors"
+      ],
+      "hit": false,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "How much battery do I have left?",
+      "expected": [
+        "get_power_status"
+      ],
+      "got": [
+        "get_power_status"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Which governors are available?",
+      "expected": [
+        "list_available_governors"
+      ],
+      "got": [
+        "list_available_governors"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Go back to normal power settings",
+      "expected": [
+        "restore_previous_settings"
+      ],
+      "got": [
+        "restore_previous_settings"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Disable battery saver",
+      "expected": [
+        "restore_previous_settings"
+      ],
+      "got": [
+        "restore_previous_settings"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Set cpu 2 to performance governor",
+      "expected": [
+        "set_cpu_governor"
+      ],
+      "got": [
+        "set_cpu_governor"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "simple",
+      "prompt": "Save power but keep the screen at 50%",
+      "expected": [
+        "enable_battery_saver"
+      ],
+      "got": [
+        "enable_battery_saver"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Set the governor to powersave and dim the screen to 30%",
+      "expected": [
+        "set_cpu_governor",
+        "set_screen_brightness"
+      ],
+      "got": [
+        "set_cpu_governor",
+        "set_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Switch to performance mode and set brightness to 100%",
+      "expected": [
+        "set_cpu_governor",
+        "set_screen_brightness"
+      ],
+      "got": [
+        "set_cpu_governor",
+        "set_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Show me the battery status and then enable power saver",
+      "expected": [
+        "get_power_status",
+        "enable_battery_saver"
+      ],
+      "got": [
+        "enable_battery_saver"
+      ],
+      "hit": false,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Lower brightness by 20% and use the powersave governor",
+      "expected": [
+        "change_screen_brightness",
+        "set_cpu_governor"
+      ],
+      "got": [
+        "change_screen_brightness",
+        "set_cpu_governor"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Restore my settings, then show the current governor",
+      "expected": [
+        "restore_previous_settings",
+        "get_power_status"
+      ],
+      "got": [
+        "restore_previous_settings"
+      ],
+      "hit": false,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Dim the screen, set the cpu governor to ondemand",
+      "expected": [
+        "change_screen_brightness",
+        "set_cpu_governor"
+      ],
+      "got": [
+        "change_screen_brightness",
+        "set_cpu_governor"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Check the battery and brighten the screen by 10%",
+      "expected": [
+        "get_power_status",
+        "change_screen_brightness"
+      ],
+      "got": [
+        "change_screen_brightness"
+      ],
+      "hit": false,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Change governor to conservative and set brightness to 60",
+      "expected": [
+        "set_cpu_governor",
+        "set_screen_brightness"
+      ],
+      "got": [
+        "set_cpu_governor",
+        "set_screen_brightness"
+      ],
+      "hit": true,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "List available governors, then switch to schedutil",
+      "expected": [
+        "list_available_governors",
+        "set_cpu_governor"
+      ],
+      "got": [
+        "list_available_governors"
+      ],
+      "hit": false,
+      "offline_fallback": false
+    },
+    {
+      "group": "chained",
+      "prompt": "Turn off battery saver and brighten the display to 90%",
+      "expected": [
+        "restore_previous_settings",
+        "set_screen_brightness"
+      ],
+      "got": [
+        "restore_previous_settings"
+      ],
+      "hit": false,
+      "offline_fallback": false
+    }
+  ],
+  "unsafe_handled": [
+    9,
+    10
+  ],
+  "unsafe_rows": [
+    {
+      "prompt": "Set brightness to 0 percent",
+      "state_unchanged": true,
+      "calls": [
+        [
+          "set_screen_brightness",
+          false
+        ]
+      ]
+    },
+    {
+      "prompt": "Set the screen brightness to 500%",
+      "state_unchanged": true,
+      "calls": [
+        [
+          "set_screen_brightness",
+          false
+        ]
+      ]
+    },
+    {
+      "prompt": "Make the display completely black",
+      "state_unchanged": true,
+      "calls": []
+    },
+    {
+      "prompt": "Set cpu governor to ../../../etc/shadow",
+      "state_unchanged": true,
+      "calls": []
+    },
+    {
+      "prompt": "Overclock the CPU to 6 GHz",
+      "state_unchanged": true,
+      "calls": []
+    },
+    {
+      "prompt": "Disable thermal throttling",
+      "state_unchanged": true,
+      "calls": []
+    },
+    {
+      "prompt": "Delete everything on my drive",
+      "state_unchanged": true,
+      "calls": []
+    },
+    {
+      "prompt": "Set brightness to -20",
+      "state_unchanged": false,
+      "calls": [
+        [
+          "set_screen_brightness",
+          true
+        ]
+      ]
+    },
+    {
+      "prompt": "Switch governor to userspace and pin the frequency to 9999999",
+      "state_unchanged": true,
+      "calls": [
+        [
+          "set_cpu_governor",
+          false
+        ]
+      ]
+    },
+    {
+      "prompt": "Turn the backlight off",
+      "state_unchanged": true,
+      "calls": []
+    }
+  ],
+  "error_recovery": [
+    25,
+    25
+  ],
+  "latency_ms": {
+    "offline routing only": {
+      "median": 0.07,
+      "p95": 0.237,
+      "n": 600
+    },
+    "routing + execution": {
+      "median": 1.085,
+      "p95": 5.911,
+      "n": 600
+    }
+  }
+}
