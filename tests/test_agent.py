@@ -93,10 +93,11 @@ def test_read_only_results_go_back_to_the_model(tools):
 def test_conditional_chain_across_rounds(tools, tree):
     llm = FakeLLM([reply("", call("get_power_status", {})),
                    reply("", call("enable_battery_saver", {}, id="t2")),
+                   reply("Battery saver is on."),     # multi-part requests get a closing model turn
                    ])
     a = PowerManagementAgent(tools=tools, llm=llm)
     a.handle("if my battery is not full, save power")
-    assert gov(tree) == "powersave" and llm.calls == 2
+    assert gov(tree) == "powersave" and llm.calls == 3
 
 
 def test_all_backends_down_falls_back_to_local(tools, tree):

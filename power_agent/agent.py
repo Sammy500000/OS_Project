@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from typing import Callable
 
 from .tools import CONFIRMABLE, READ_ONLY, TOOL_SPECS, PowerTools
@@ -133,7 +134,8 @@ class PowerManagementAgent:
                 ran_read_only |= c.name in READ_ONLY
                 messages.append({"role": "tool", "tool_call_id": c.id, "name": c.name,
                                  "content": json.dumps(compact(c.name, out))})
-            if self.summary == "local" and not ran_read_only:
+            multi = re.search(r"\b(and|then|also|after)\b|[,;]", prompt, re.I)
+            if self.summary == "local" and not ran_read_only and not multi:
                 return self._summarise()      # saves the second request on the common path
         return self._summarise()
 
